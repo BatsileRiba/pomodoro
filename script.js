@@ -154,3 +154,43 @@ function showCongratsModal() {
         }
     };
 }
+
+let startY = null;
+
+minutesColumn.parentElement.addEventListener("touchstart", (event) => {
+    if (!countdownActive) {
+        startY = event.touches[0].clientY;
+    }
+});
+
+minutesColumn.parentElement.addEventListener("touchmove", (event) => {
+    if (!countdownActive && startY !== null) {
+        let currentY = event.touches[0].clientY;
+        let deltaY = currentY - startY;
+
+        if (Math.abs(deltaY) > 20) {
+            selectedMinutes = (selectedMinutes + (deltaY > 0 ? 1 : -1) + sequence.length) % sequence.length;
+            updateMinutes();
+            startY = currentY; 
+        }
+    }
+});
+
+secondsColumn.parentElement.addEventListener("touchstart", (event) => {
+    if (!countdownActive) {
+        startY = event.touches[0].clientY;
+    }
+});
+
+secondsColumn.parentElement.addEventListener("touchmove", (event) => {
+    if (!countdownActive && startY !== null) {
+        let currentY = event.touches[0].clientY;
+        let deltaY = currentY - startY;
+
+        if (Math.abs(deltaY) > 20) {
+            selectedSeconds = (selectedSeconds + (deltaY > 0 ? 1 : -1) + 60) % 60;
+            updateSeconds();
+            startY = currentY;
+        }
+    }
+});

@@ -4,6 +4,70 @@
     box-sizing: border-box;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  ::-webkit-selection {
+      background: transparent;
+      color: inherit;
+  }
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:visited,
+a:active {
+  outline: none;
+}
+
+*,
+.modal-overlay *,
+.modal * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.modal-overlay *::selection,
+.modal *::selection {
+  background: transparent;
+  color: inherit;
+}
+
+input,
+textarea,
+button,
+select,
+a,
+.modal-overlay input,
+.modal-overlay textarea,
+.modal-overlay button,
+.modal-overlay select,
+.modal-overlay a,
+.modal input,
+.modal textarea,
+.modal button,
+.modal select,
+.modal a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a:focus,
+a:visited,
+a:active,
+.modal-overlay a:focus,
+.modal-overlay a:visited,
+.modal-overlay a:active,
+.modal a:focus,
+.modal a:visited,
+.modal a:active {
+  outline: none;
+}
+
 body {
     font-family: "Scada", sans-serif;
 }
