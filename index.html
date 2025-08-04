@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batsile's Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+
+    <img src="assets/Logo.png" alt="Logo" class="logoImage">
+
+    
+
+</header> 
+
+<div class="main">
+<h1>Hi there :)</h1>
+
+<h1>Let's focus today</h1>
+<br>
+<h2>Choose a timer duration from one of our templates</h2>
+<br>
+<div class="templateDurations">
+    <button id="ten" class="btn1">10 Minutes</button>
+    <button id="twentyFive" class="btn2">25 Minutes</button>
+    <button id="sixty" class="btn3">60 Minutes</button>
+</div>
+<br>
+<h2>or set up your own duration</h2>
+<br>
+
+<div class="times">
+
+<div class="timeSelector container">
+
+<div class=" column minutes">
+    <h1 class="highlight">00</h1>
+ </div>
+
+<div class="separator"> <h1>:</h1> </div>
+
+<div class=" column seconds">
+    <h1 class="static">00</h1>
+</div>
+
+</div>
+
+<div class="timerContainer container">
+    <div class="remainingMinutes">
+        <h1 class="remMin">00</h1> </div>
+    
+    <div class="separator"> <h1>:</h1> </div>
+    
+    <div class="remainingSeconds">
+        <h1 class="remSec">00</h1>
+    </div>
+</div>
+
+</div>
+
+<div class="confirmContainer">
+<button class="confirm" id="confirm">START SESSION</button>
+</div>
+
+
+ <br>
+<div class="options">
+<button id="pause">Pause Pomodoro</button>
+<button id="Reset">Reset Pomodoro</button>
+</div>
+</div>
+
+<div id="congratsModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h2>🎉 Congratulations!</h2>
+    <p>You’ve completed your Pomodoro session!</p>
+  </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

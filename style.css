@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Scada", sans-serif;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logoImage {
+    width: 320px;
+    height:auto;
+    margin-top: -130px;
+}
+
+
+
+.main {
+    display: flexbox;
+    flex-direction: column;
+    justify-items: center;
+    margin-top: -130px;
+}
+
+.options {
+    display: flex;
+    gap: 30px;
+}
+
+.templateDurations {
+    display: flex;
+    gap: 30px;
+}
+
+.timeSelector, .timerContainer {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.btn1 {
+    width: 150px; 
+    height: 150px; 
+    background-color: #f2c6de31; 
+    color: black;
+    border: solid 5px #f2c6de ;
+    border-radius: 50%; 
+    font-size: 20px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    cursor: pointer;
+    transition: background-color 0.3s; 
+    font-family: cursive;}
+
+
+.btn2 {
+    width: 150px;
+    height: 150px; 
+    background-color: #dbcdf02a; 
+    color: black;
+    border: solid 5px #dbcdf0 ;
+    border-radius: 50%; 
+    font-size: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    font-family: cursive;}
+
+.btn3 {
+    width: 150px; 
+    height: 150px;
+    background-color: #c9e4de2c;
+    color: black;
+    border: solid 5px #c9e4de ;
+    border-radius: 50%; 
+    font-size: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    font-family: cursive;}
+
+.times {
+    display: flex;
+    position: relative;
+    gap: 20px;
+}
+
+
+
+ .timeSelector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    height: 100px;
+    width: 300px;
+    border: #f2c6de 3px solid;
+    border-radius: 30px;
+    
+ }           
+
+ .timeSelector h1 {
+    color: #f2c6de;
+ }
+
+ .timerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    height: 100px;
+    width: 300px;
+    border: #dbcdf0 3px solid;
+    border-radius: 30px;
+    
+    
+ }
+
+ .timerContainer h1 {
+    color: #dbcdf0;
+    font-weight: bold;
+    
+ }
+
+ .column {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+    overflow: hidden;
+    position: relative;
+ }
+
+ .minutes {
+    width:50px;
+    text-align: center;
+ }
+
+ .seconds {
+    width:50px;
+    text-align: center;
+    align-self: center;
+ }
+ 
+.options button  {
+    background-color: #f57e9a;
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    border-radius: 9px;
+    font-weight: bold;
+ 
+}
+
+.confirmContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.confirm {
+    background-color: transparent;
+    border: none;
+    color: #f57e9a;
+    padding: 10px 10px;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 1.5px;
+
+}
+
+.history {
+
+    background-color: transparent;
+    border: none;
+    color: #f57e9a;
+    padding: 10px 10px;
+    border-radius: 9px;
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: 1.5px;
+    
+       
+}
+
+.options button:hover {
+    cursor: pointer;
+}
+
+.confirm:hover {
+    cursor: pointer;
+    text-decoration:underline;
+    
+}
+
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    animation: popFade 0.4s ease-out;
+}
+
+.close-btn {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@keyframes popFade {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+@media screen and (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    
+    .logoImage {
+        width: 350px;
+        margin-top: -100px;
+        margin-left: 9px;
+    }
+
+    
+    .main {
+        margin-top: -130px;
+        padding: 0 10px;
+    }
+
+    .main h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .main h2{
+        font-size: 1.2rem;
+        text-align: center;
+        width: 70%;
+    }
+    
+    .btn1, .btn2, .btn3 {
+        width: 100px;
+        height: 100px;
+        font-size: 16px;
+    }
+    
+    .options {
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .templateDurations {
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .timeSelector, .timerContainer {
+        width: 90%;
+        max-width: 400px;
+        height: 70px;
+    }
+    
+    .timeSelector h1, .timerContainer h1 {
+        font-size: 1.2rem;
+    }
+
+    
+    .times {
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .confirm {
+        font-size: medium;
+        padding: 8px 8px;
+    }
+
+    .timeSelector, .timerContainer {
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
+    
+}
