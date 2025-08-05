@@ -88,20 +88,24 @@ body {
 
 
 .main {
-    display: flexbox;
+    display: flex;
     flex-direction: column;
-    justify-items: center;
+    align-items: center;
     margin-top: -130px;
 }
 
 .options {
     display: flex;
     gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .templateDurations {
     display: flex;
     gap: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
 .timeSelector, .timerContainer {
@@ -348,11 +352,16 @@ body {
     .options {
         gap: 15px;
         align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; 
     }
     
     .templateDurations {
         gap: 15px;
         align-items: center;
+         justify-content: center; 
+        flex-wrap: wrap;
+    
     }
     
     .timeSelector, .timerContainer {
